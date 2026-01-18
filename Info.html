@@ -3,6 +3,46 @@
 <head>
     <meta charset="utf-8">
     <title>Общая информация | Queen</title>
+    <style>
+        .member-card {
+            background-color: #222;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 10px;
+            border: 2px solid #333;
+            transition: transform 0.3s;
+        }
+        .member-card:hover {
+            transform: scale(1.05);
+            border-color: #FFD700;
+        }
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .photo-frame {
+            border: 3px solid #FFD700;
+            border-radius: 50%;
+            padding: 5px;
+            background-color: #111;
+            margin: 0 auto 15px;
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    </style>
 </head>
 <body bgcolor="#111111" text="#FFFFFF">
     <!-- Меню -->
@@ -22,100 +62,167 @@
     <h1 align="center"><em>Общая информация о группе Queen</em></h1>
 
     <center>
-        <!-- Основное фото группы -->
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Queen_%281975%29.jpg/800px-Queen_%281975%29.jpg" 
-             width="500" 
-             alt="Queen 1975" 
-             style="border: 3px solid #FFD700; border-radius: 10px; margin: 20px 0;">
-        
-        <p style="color:#FFD700; font-style: italic;">
-            Легендарный состав Queen: Фредди Меркьюри, Брайан Мэй, Роджер Тейлор, Джон Дикон
-        </p>
+        <!-- Основное фото группы (работающая ссылка) -->
+        <div style="max-width: 600px; margin: 20px auto;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Queen_%281975%29.jpg/800px-Queen_%281975%29.jpg" 
+                 width="100%" 
+                 alt="Queen 1975" 
+                 style="border: 3px solid #FFD700; border-radius: 10px;">
+            <p style="color:#FFD700; font-style: italic; margin-top: 10px;">
+                <strong>Queen 1975</strong><br>
+                Легендарный состав Queen: Фредди Меркьюри, Брайан Мэй, Роджер Тейлор, Джон Дикон
+            </p>
+        </div>
     </center>
 
-    <div style="max-width: 800px; margin: 0 auto; padding: 20px;">
-        <h2>🎸 О группе Queen</h2>
-        <p style="font-size: 18px; line-height: 1.6;">
-            <strong>Queen</strong> — британская рок-группа, образованная в 1970 году в Лондоне. 
-            Группа стала одной из самых успешных и влиятельных в истории рок-музыки. 
-            За время своего существования было продано более 300 миллионов копий альбомов.
-        </p>
+    <hr width="80%" align="center" size="1" color="#FFD700">
 
-        <h2>👥 Состав группы:</h2>
+    <div style="max-width: 800px; margin: 0 auto; padding: 20px;">
         
-        <!-- Сетка с участниками -->
-        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 30px 0;">
+        <h2>🎸 О группе Queen</h2>
+        <div style="background-color: #222; padding: 20px; border-radius: 10px; border-left: 5px solid #FFD700;">
+            <p style="font-size: 18px; line-height: 1.6;">
+                <strong>Queen</strong> — британская рок-группа, образованная в 1970 году в Лондоне. 
+                Группа стала одной из самых успешных и влиятельных в истории рок-музыки. 
+                За время своего существования было продано более 300 миллионов копий альбомов.
+            </p>
+        </div>
+
+        <h2 style="margin-top: 40px;">👥 Состав группы</h2>
+        
+        <div class="members-grid">
             
             <!-- Фредди Меркьюри -->
-            <div style="background-color: #222; padding: 15px; border-radius: 10px; text-align: center;">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Freddie_Mercury_performing_in_New_Haven%2C_CT%2C_November_1977.jpg/400px-Freddie_Mercury_performing_in_New_Haven%2C_CT%2C_November_1977.jpg" 
-                     width="150" 
-                     alt="Фредди Меркьюри"
-                     style="border-radius: 50%; border: 3px solid #FFD700;">
-                <h3 style="color:#FFD700;">Фредди Меркьюри</h3>
+            <div class="member-card">
+                <div class="photo-frame">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Freddie_Mercury_performing_in_New_Haven%2C_CT%2C_November_1977.jpg/400px-Freddie_Mercury_performing_in_New_Haven%2C_CT%2C_November_1977.jpg" 
+                         alt="Фредди Меркьюри">
+                </div>
+                <h3 style="color:#FFD700;">🎤 Фредди Меркьюри</h3>
                 <p><strong>Годы:</strong> 1970-1991</p>
                 <p><strong>Роль:</strong> Вокал, фортепиано</p>
+                <p><strong>Родился:</strong> 5 сентября 1946</p>
+                <p><em>"The Show Must Go On"</em></p>
             </div>
             
             <!-- Брайан Мэй -->
-            <div style="background-color: #222; padding: 15px; border-radius: 10px; text-align: center;">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Brian_May_%282019%29.jpg/400px-Brian_May_%282019%29.jpg" 
-                     width="150" 
-                     alt="Брайан Мэй"
-                     style="border-radius: 50%; border: 3px solid #FFD700;">
-                <h3 style="color:#FFD700;">Брайан Мэй</h3>
+            <div class="member-card">
+                <div class="photo-frame">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Brian_May_%282019%29.jpg/400px-Brian_May_%282019%29.jpg" 
+                         alt="Брайан Мэй">
+                </div>
+                <h3 style="color:#FFD700;">🎸 Брайан Мэй</h3>
                 <p><strong>Годы:</strong> 1970-настоящее время</p>
                 <p><strong>Роль:</strong> Гитара, вокал</p>
+                <p><strong>Родился:</strong> 19 июля 1947</p>
+                <p><em>"We Will Rock You"</em></p>
             </div>
             
             <!-- Роджер Тейлор -->
-            <div style="background-color: #222; padding: 15px; border-radius: 10px; text-align: center;">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Roger_Taylor_%282019%29.jpg/400px-Roger_Taylor_%282019%29.jpg" 
-                     width="150" 
-                     alt="Роджер Тейлор"
-                     style="border-radius: 50%; border: 3px solid #FFD700;">
-                <h3 style="color:#FFD700;">Роджер Тейлор</h3>
+            <div class="member-card">
+                <div class="photo-frame">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Roger_Taylor_%282019%29.jpg/400px-Roger_Taylor_%282019%29.jpg" 
+                         alt="Роджер Тейлор">
+                </div>
+                <h3 style="color:#FFD700;">🥁 Роджер Тейлор</h3>
                 <p><strong>Годы:</strong> 1970-настоящее время</p>
                 <p><strong>Роль:</strong> Ударные, вокал</p>
+                <p><strong>Родился:</strong> 26 июля 1949</p>
+                <p><em>"Radio Ga Ga"</em></p>
             </div>
             
             <!-- Джон Дикон -->
-            <div style="background-color: #222; padding: 15px; border-radius: 10px; text-align: center;">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/John_Deacon_1974.jpg/400px-John_Deacon_1974.jpg" 
-                     width="150" 
-                     alt="Джон Дикон"
-                     style="border-radius: 50%; border: 3px solid #FFD700;">
-                <h3 style="color:#FFD700;">Джон Дикон</h3>
+            <div class="member-card">
+                <div class="photo-frame">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/John_Deacon_1974.jpg/400px-John_Deacon_1974.jpg" 
+                         alt="Джон Дикон">
+                </div>
+                <h3 style="color:#FFD700;">🎸 Джон Дикон</h3>
                 <p><strong>Годы:</strong> 1971-1997</p>
                 <p><strong>Роль:</strong> Бас-гитара</p>
+                <p><strong>Родился:</strong> 19 августа 1951</p>
+                <p><em>"Another One Bites the Dust"</em></p>
             </div>
         </div>
 
-        <h2>🎵 Музыкальный стиль:</h2>
-        <ul style="font-size: 17px; line-height: 1.6;">
-            <li><strong>Рок</strong> (хард-рок, арена-рок, глэм-рок)</li>
-            <li><strong>Прогрессивный рок</strong></li>
-            <li><strong>Поп-рок</strong></li>
-            <li><strong>Хэви-метал</strong> (ранние работы)</li>
-            <li><strong>Диско</strong> (влияние в 1980-х)</li>
-        </ul>
+        <h2>🎵 Музыкальный стиль</h2>
+        <div style="background-color: #222; padding: 15px; border-radius: 10px; margin: 20px 0;">
+            <ul style="font-size: 17px; line-height: 1.6; list-style-type: none; padding-left: 0;">
+                <li style="margin: 10px 0; padding-left: 20px; position: relative;">
+                    <span style="color:#FFD700; position: absolute; left: 0;">▶</span>
+                    <strong>Рок</strong> (хард-рок, арена-рок, глэм-рок)
+                </li>
+                <li style="margin: 10px 0; padding-left: 20px; position: relative;">
+                    <span style="color:#FFD700; position: absolute; left: 0;">▶</span>
+                    <strong>Прогрессивный рок</strong>
+                </li>
+                <li style="margin: 10px 0; padding-left: 20px; position: relative;">
+                    <span style="color:#FFD700; position: absolute; left: 0;">▶</span>
+                    <strong>Поп-рок</strong>
+                </li>
+                <li style="margin: 10px 0; padding-left: 20px; position: relative;">
+                    <span style="color:#FFD700; position: absolute; left: 0;">▶</span>
+                    <strong>Хэви-метал</strong> (ранние работы)
+                </li>
+                <li style="margin: 10px 0; padding-left: 20px; position: relative;">
+                    <span style="color:#FFD700; position: absolute; left: 0;">▶</span>
+                    <strong>Диско</strong> (влияние в 1980-х)
+                </li>
+            </ul>
+        </div>
 
-        <h2>🏆 Основные достижения:</h2>
-        <ul style="font-size: 17px; line-height: 1.6;">
-            <li>Продано более 300 миллионов копий альбомов</li>
-            <li>18 хитов №1 в UK Albums Chart</li>
-            <li>18 хитов №1 в Billboard Hot 100</li>
-            <li>Включены в Зал славы рок-н-ролла (2001)</li>
-            <li>Премия "Грэмми" за жизненные достижения (2018)</li>
-        </ul>
+        <h2>🏆 Основные достижения</h2>
+        <div style="background-color: #222; padding: 15px; border-radius: 10px; margin: 20px 0;">
+            <ul style="font-size: 17px; line-height: 1.6;">
+                <li>✅ Продано более 300 миллионов копий альбомов</li>
+                <li>✅ 18 хитов №1 в UK Albums Chart</li>
+                <li>✅ 18 хитов №1 в Billboard Hot 100</li>
+                <li>✅ Включены в Зал славы рок-н-ролла (2001)</li>
+                <li>✅ Премия "Грэмми" за жизненные достижения (2018)</li>
+                <li>✅ Фильм "Богемская рапсодия" собрал $900 млн</li>
+                <li>✅ "Bohemian Rhapsody" — самый популярный трек XX века</li>
+            </ul>
+        </div>
+
+        <h2>📀 Знаковые альбомы</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 15px; margin: 20px 0;">
+            <div style="background-color: #333; padding: 10px; border-radius: 5px; flex: 1; min-width: 150px;">
+                <strong>1975</strong><br>A Night at the Opera
+            </div>
+            <div style="background-color: #333; padding: 10px; border-radius: 5px; flex: 1; min-width: 150px;">
+                <strong>1977</strong><br>News of the World
+            </div>
+            <div style="background-color: #333; padding: 10px; border-radius: 5px; flex: 1; min-width: 150px;">
+                <strong>1980</strong><br>The Game
+            </div>
+            <div style="background-color: #333; padding: 10px; border-radius: 5px; flex: 1; min-width: 150px;">
+                <strong>1986</strong><br>A Kind of Magic
+            </div>
+        </div>
+
     </div>
+
+    <!-- Кнопка назад -->
+    <center style="margin: 30px 0;">
+        <a href="index.html" style="
+            background-color: #FFD700;
+            color: #000;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+        ">
+            ← На главную
+        </a>
+    </center>
 
     <hr width="50%" align="center" size="1" color="green">
 
     <p align="center">
         <font face="Arial" size="1">
             &copy; Все права защищены. 2023<br>
-            <em>Фотографии: Wikipedia • Информация: Официальные источники</em>
+            <em>Фотографии: Wikipedia • Информация: Официальные источники Queen</em>
         </font>
     </p>
 
